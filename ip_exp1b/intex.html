@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Custom T-Shirt Orders</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#sample">Sample T-Shirts</a> |
+        <a href="#order">Order</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+      
+        <p>Order your customized T-shirts with your own tagline, color, and size preferences. Simply fill out the form below!</p>
+
+        <h3>Special Sale</h3>
+        <p>Don't miss our special sale! Get up to 50% off on selected T-shirts.</p>
+        <img src="sale.webp" alt="Sale" style="max-width: 500px; height: auto; display: block; margin: 0 auto;">
+    </section>
+
+    <section id="sample">
+        <h2>Sample T-Shirts</h2>
+        <div>
+            <img src="tshirt1.webp" alt="Sample T-Shirt 1" style="max-width: 200px; height: auto; margin: 10px;">
+            <img src="tshirt2.webp" alt="Sample T-Shirt 2" style="max-width: 200px; height: auto; margin: 10px;">
+            <img src="tshirt3.jpg" alt="Sample T-Shirt 3" style="max-width: 200px; height: auto; margin: 10px;">
+           
+        </div>
+        <p>Explore our exclusive collection of customizable T-shirts!</p>
+    </section>
+
+    <section id="order">
+        <h2>Order Your Customized T-Shirt</h2>
+        <form action="/submit-order" method="post">
+            <fieldset>
+                <legend>Customize Your T-Shirt</legend>
+
+                <label for="tagline">Tagline on the Shirt:</label>
+                <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required><br><br>
+
+                <label for="color">Color:</label>
+                <select id="color" name="color" required>
+                    <option value="">Select a color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select><br><br>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="">Select a size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select><br><br>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required><br><br>
+
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date" id="delivery-date" name="delivery-date" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Details</legend>
+
+                <label for="name">Recipient's Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter recipient's name" required><br><br>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter delivery address" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter recipient's email" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required pattern="[0-9]{10}"><br><br>
+            </fieldset>
+
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" placeholder="Any additional comments or special instructions"></textarea><br><br>
+
+            <div class="buttons">
+                <input type="submit" value="Place Order">
+                <input type="reset" value="Reset Form">
+            </div>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, please reach out to us at <a href="mailto:support@tshirtorders.com">support@tshirtorders.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Custom T-Shirt Orders. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
